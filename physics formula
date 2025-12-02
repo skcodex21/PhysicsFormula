@@ -1,0 +1,41 @@
+while True:
+    print("What physics formula do you want to calculate?")
+    print("Choose Below:")
+    print("a. Density")
+    print("b. Speed/Velocity")
+    print("c. Kinetic Energy")
+    print("d. Ohms Law")
+    print("e. Pressure")
+    print("f. Exit")
+
+    choice = input("Enter a choice: ")
+
+    if choice == "a":
+        mass = float(input("Enter your mass(kg): "))
+        volume = float(input("Enter your volume(L): "))
+        density = mass/volume
+        print(f"{mass}  / {volume} = {density}")
+    elif choice == "b":
+        distance = float(input("Enter your distance(m): "))
+        time = float(input("Enter your time(s): "))
+        speed = distance / time
+        print(f"{distance}m / {time}s = {speed}m/s ")
+    elif choice == "c":
+        mass = float(input("Enter your mass(kg): "))
+        velocity = float(input("Enter your velocity(m/s): "))
+        kinetic_energy = 0.5 * mass * (velocity**2)
+        print(f"0.5 x {mass}kg x {velocity} = {kinetic_energy}")
+    elif choice == "d":
+        current  = float(input("Enter your current(A): "))
+        voltage = float(input("Enter your voltage(V): "))
+        ohmsLaw = current * voltage
+        print(f"{current} x {voltage} = {ohmsLaw}")
+    elif choice == "e":
+        force = float(input("Enter your force: "))
+        area = float(input("Enter your area: "))
+        pressure = force/area
+        print(f"{force} ÷ {area} = {pressure}")
+    elif choice == "f":
+        break;
+    else:
+        print("Wrong input")
